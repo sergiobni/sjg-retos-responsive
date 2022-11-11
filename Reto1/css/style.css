@@ -2,6 +2,8 @@ body {
   background-color: antiquewhite;
   background-image: url(../assets/retrowave-lineas-montanas_1920x1080_xtrafondos.com.jpg);
   background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
 .titulo {
   margin-top: 4vw;
@@ -50,4 +52,10 @@ body {
 }
 .botones img {
   padding-right: 5px;
+}
+
+@media (max-width: 850px) {
+  .marcotop {
+    background-image: none;
+  }
 }
