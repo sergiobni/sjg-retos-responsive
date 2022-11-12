@@ -1,5 +1,4 @@
 body {
-  background-color: antiquewhite;
   background-image: url(../assets/retrowave-lineas-montanas_1920x1080_xtrafondos.com.jpg);
   background-size: cover;
   background-position: center;
@@ -11,7 +10,6 @@ body {
 
 .marcotop {
   background-color: white;
-  padding: 1em;
   background-image: url(../assets/5172570_lock_locked_icon.png);
   background-repeat: no-repeat;
   background-position: right;
@@ -27,12 +25,6 @@ body {
   border-color: rgb(88, 226, 200);
 }
 .btnlogin:hover {
-  background-color: rgb(216, 41, 233);
-}
-.btnlogin:focus {
-  background-color: rgb(216, 41, 233);
-}
-.btnlogin:active {
   background-color: rgb(216, 41, 233);
 }
 
