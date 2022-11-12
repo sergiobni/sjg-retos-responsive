@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid mt-5">
+      <div class="row">
+        <div class="col-md">
+          <div class="text-center text-primary">
+            <h1>Contact us</h1>
+          </div>
+          <hr />
+          <div class="row justify-content-center">
+            <form class="needs-validation col-md-8" novalidate>
+              <div class="input-group mb-3">
+                <span class="input-group-text"
+                  ><span
+                    ><img
+                      src="./assets/1564534_customer_man_user_account_profile_icon (2).png"
+                  /></span>
+                </span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="First Name"
+                  required
+                />
+                <div class="invalid-feedback">Introduce a name</div>
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text"
+                  ><span
+                    ><img
+                      src="./assets/1564534_customer_man_user_account_profile_icon (2).png"
+                  /></span>
+                </span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  aria-describedby="lastName"
+                  placeholder="Last Name"
+                  required
+                />
+                <div class="invalid-feedback">Introduce a surname</div>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text"
+                  ><span
+                    ><img src="./assets/5340267_e_email_letter_mail_icon.png"
+                  /></span>
+                </span>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailAddress"
+                  aria-describedby="emailAddress"
+                  placeholder="Email Address"
+                  required
+                />
+                <div class="invalid-feedback">Introduce a valid email</div>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text"
+                  ><span><img src="./assets/172517_phone_icon.png" /></span>
+                </span>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  aria-describedby="phone"
+                  placeholder="Phone"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text"
+                  ><span
+                    ><img src="./assets/9025724_note_pencil_icon.png"
+                  /></span>
+                </span>
+                <textarea
+                  class="form-control"
+                  id="textarea"
+                  rows="3"
+                  placeholder="Enter your message for us here. We will get back to you within 2 business days."
+                  required
+                ></textarea>
+                <div class="invalid-feedback">Introduce the feedback</div>
+              </div>
+              <div class="offset-2">
+                <button type="submit" class="btn btn-primary btnlogin">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
