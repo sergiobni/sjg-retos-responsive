@@ -1,0 +1,18 @@
+body {
+  background-color: rgb(216, 216, 216);
+}
+.forma {
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  border-radius: 10px 10px 0px 0px;
+}
+.forma2 {
+  margin-left: 1em;
+  margin-right: 1em;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.forma2 a {
+  color: white;
+}
