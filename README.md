@@ -1,5 +1,5 @@
 # sjg-retos-responsive
-Bootstrap-on
+
 [Reto1 - Desplegado en web](https://sergiobni.github.io/sjg-retos-responsive/Reto1/)
 \
 [Reto1 - Código fuente](https://github.com/sergiobni/sjg-retos-responsive/tree/master/Reto1)
