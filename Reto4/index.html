@@ -33,14 +33,11 @@
             <span
               >Mostrar
               <div class="btn-group">
-                <button
-                  type="button"
-                  class="btn btn-secondary dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  10
-                </button>
+                <select class="form-select" id="cantidadRegistrosMostrar">
+                  <option selected value="">10</option>
+                  <option>20</option>
+                  <option>50</option>
+                </select>
                 <ul class="dropdown-menu dropdown-menu-end">
                   <li>
                     <button class="dropdown-item" type="button">10</button>
@@ -57,9 +54,13 @@
             >
           </div>
 
-          <label for="inputPassword" class="col col-form-label">Buscar</label>
           <div class="col-sm-2">
-            <input type="password" class="form-control" id="inputPassword" />
+            <input
+              type="text"
+              class="form-control"
+              id="inputBuscar"
+              placeholder="Buscar"
+            />
           </div>
         </div>
 
@@ -83,9 +84,19 @@
             <td>
               <button type="button" class="btn btn-outline-primary">
                 <i class="bi bi-eye"></i></button
-              ><button type="button" class="btn btn-outline-success">
+              ><button
+                type="button"
+                class="btn btn-outline-success"
+                data-bs-toggle="modal"
+                data-bs-target="#editarUsuarioModal"
+              >
                 <i class="bi bi-pencil-square"></i></button
-              ><button type="button" class="btn btn-outline-danger">
+              ><button
+                type="button"
+                class="btn btn-outline-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#eliminarusuarioModal"
+              >
                 <i class="bi bi-trash-fill"></i>
               </button>
             </td>
@@ -98,9 +109,19 @@
             <td>
               <button type="button" class="btn btn-outline-primary">
                 <i class="bi bi-eye"></i></button
-              ><button type="button" class="btn btn-outline-success">
+              ><button
+                type="button"
+                class="btn btn-outline-success"
+                data-bs-toggle="modal"
+                data-bs-target="#editarUsuarioModal"
+              >
                 <i class="bi bi-pencil-square"></i></button
-              ><button type="button" class="btn btn-outline-danger">
+              ><button
+                type="button"
+                class="btn btn-outline-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#eliminarusuarioModal"
+              >
                 <i class="bi bi-trash-fill"></i>
               </button>
             </td>
@@ -113,9 +134,19 @@
             <td>
               <button type="button" class="btn btn-outline-primary">
                 <i class="bi bi-eye"></i></button
-              ><button type="button" class="btn btn-outline-success">
+              ><button
+                type="button"
+                class="btn btn-outline-success"
+                data-bs-toggle="modal"
+                data-bs-target="#editarUsuarioModal"
+              >
                 <i class="bi bi-pencil-square"></i></button
-              ><button type="button" class="btn btn-outline-danger">
+              ><button
+                type="button"
+                class="btn btn-outline-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#eliminarusuarioModal"
+              >
                 <i class="bi bi-trash-fill"></i>
               </button>
             </td>
@@ -128,9 +159,19 @@
             <td>
               <button type="button" class="btn btn-outline-primary">
                 <i class="bi bi-eye"></i></button
-              ><button type="button" class="btn btn-outline-success">
+              ><button
+                type="button"
+                class="btn btn-outline-success"
+                data-bs-toggle="modal"
+                data-bs-target="#editarUsuarioModal"
+              >
                 <i class="bi bi-pencil-square"></i></button
-              ><button type="button" class="btn btn-outline-danger">
+              ><button
+                type="button"
+                class="btn btn-outline-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#eliminarusuarioModal"
+              >
                 <i class="bi bi-trash-fill"></i>
               </button>
             </td>
@@ -143,9 +184,19 @@
             <td>
               <button type="button" class="btn btn-outline-primary">
                 <i class="bi bi-eye"></i></button
-              ><button type="button" class="btn btn-outline-success">
+              ><button
+                type="button"
+                class="btn btn-outline-success"
+                data-bs-toggle="modal"
+                data-bs-target="#editarUsuarioModal"
+              >
                 <i class="bi bi-pencil-square"></i></button
-              ><button type="button" class="btn btn-outline-danger">
+              ><button
+                type="button"
+                class="btn btn-outline-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#eliminarusuarioModal"
+              >
                 <i class="bi bi-trash-fill"></i>
               </button>
             </td>
@@ -156,7 +207,7 @@
         <div class="col">
           <span>Mostrando del 1 al 5 de un total de 5 usuarios</span>
         </div>
-        <div class="col">
+        <div class="col-auto">
           <nav aria-label="...">
             <ul class="pagination">
               <li class="page-item">
@@ -172,7 +223,7 @@
           </nav>
         </div>
       </div>
-      <!-- Button trigger modal -->
+      <!-- Button trigger modal nuevo usuario -->
       <button
         type="button"
         class="btn btn-primary"
@@ -182,7 +233,7 @@
         Nuevo usuario
       </button>
 
-      <!-- Modal -->
+      <!-- Modal nuevos usuarios -->
       <div
         class="modal fade"
         id="staticBackdrop"
@@ -207,43 +258,71 @@
             </div>
             <div class="modal-body">
               <form class="needs-validation" novalidate>
-                <div class="mb-3">
-                  <label for="recipient-name" class="col-form-label"
+                <div class="col-md-5">
+                  <label for="validationCustom01" class="form-label"
                     >Nombre de usuario:</label
                   >
                   <input
                     type="text"
-                    requiered
                     class="form-control"
-                    id="recipient-name"
+                    id="validationCustom01"
+                    required
                   />
                   <div class="invalid-feedback">
                     Nombre de usuario no válido
                   </div>
                 </div>
-                <div class="dropdown">
+
+                <div class="col-md-5 my-2">
+                  <label class="form-label">Sector:</label>
+                  <select class="form-select" id="validationCustom04" required>
+                    <option selected disabled value="">Elige sector</option>
+                    <option>Administración</option>
+                    <option>Producción</option>
+                    <option>Mantenimiento</option>
+                  </select>
+                  <div class="invalid-feedback">Elige un sector</div>
+                </div>
+
+                <div class="modal-footer">
                   <button
-                    class="btn btn-secondary dropdown-toggle"
                     type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    requiered
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
                   >
-                    Sector:
+                    Cancelar
                   </button>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="#">Administración</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Producción</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Mantenimiento</a>
-                    </li>
-                  </ul>
+                  <button type="submit" class="btn btn-primary">Añadir</button>
                 </div>
               </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal eliminar usuarios -->
+      <div
+        class="modal fade"
+        id="eliminarusuarioModal"
+        tabindex="-1"
+        aria-labelledby="eliminarUsuarioLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="eliminarUsuarioLabel">
+                Eliminar usuario
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              ¿Seguro que quieres eliminar el usuario seleccionado?
             </div>
             <div class="modal-footer">
               <button
@@ -253,11 +332,50 @@
               >
                 Cancelar
               </button>
-              <button type="submit" class="btn btn-primary">Añadir</button>
+              <button type="button" class="btn btn-danger">Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal editar usuarios -->
+      <div
+        class="modal fade"
+        id="editarUsuarioModal"
+        tabindex="-1"
+        aria-labelledby="editarUsuarioLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editarUsuarioLabel">
+                Editar usuario
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">Contiene campos para editar</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cancelar
+              </button>
+              <button type="button" class="btn btn-success">
+                Guardar cambios
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>
